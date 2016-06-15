@@ -63,13 +63,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Arseney\Documents\Repos\essentia\src\examples\python\streaming_extractor;C:\Users\Arseney\Documents\Repos\essentia\src\3rdparty\vamp-plugin-sdk-2.4;C:\Users\Arseney\Documents\Repos\essentia\src\essentia;C:\Users\Arseney\Documents\Repos\essentia\src;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Arseney\Documents\Repos\essentia\packaging\win32_3rdparty\fftw-3.3.3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)src\examples\python\streaming_extractor;$(SolutionDir)src\3rdparty\vamp-plugin-sdk-2.4;$(SolutionDir)src\essentia;$(SolutionDir)src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)packaging\win32_3rdparty\fftw-3.3.3\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Arseney\Documents\Repos\essentia\src\examples\python\streaming_extractor;C:\Users\Arseney\Documents\Repos\essentia\src\3rdparty\vamp-plugin-sdk-2.4;C:\Users\Arseney\Documents\Repos\essentia\src\essentia;C:\Users\Arseney\Documents\Repos\essentia\src;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Arseney\Documents\Repos\essentia\packaging\win32_3rdparty\fftw-3.3.3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)src\examples\python\streaming_extractor;$(SolutionDir)src\3rdparty\vamp-plugin-sdk-2.4;$(SolutionDir)src\essentia;$(SolutionDir)src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)packaging\win32_3rdparty\fftw-3.3.3\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

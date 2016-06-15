@@ -3,4 +3,4 @@
 	url = https://github.com/MTG/essentia-audio
 [submodule "packaging/win32_3rdparty/libav"]
 	path = packaging/win32_3rdparty/libav
-	url = https://github.com/libav/libav.git
+	url = https://github.com/libav/libav

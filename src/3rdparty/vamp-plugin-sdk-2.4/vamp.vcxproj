@@ -63,11 +63,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Arseney\Documents\Repos\essentia\src\3rdparty\vamp-plugin-sdk-2.4;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\src\3rdparty\vamp-plugin-sdk-2.4;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Arseney\Documents\Repos\essentia\src\3rdparty\vamp-plugin-sdk-2.4;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\src\3rdparty\vamp-plugin-sdk-2.4;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

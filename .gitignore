@@ -82,3 +82,12 @@ packaging/debian_3rdparty/include
 packaging/win32_3rdparty/bin
 packaging/win32_3rdparty/share
 packaging/win32_3rdparty/include
+
+/.vs/Essentia/v14
+/Debug
+/Release
+*.tlog
+*.log
+*.pdb
+*.obj
+*.vcxproj.*
