@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Essentia", "Essentia.vcxproj", "{2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vamp_plugin", "src\examples\vamp_plugin.vcxproj", "{466E50CE-D31F-4F15-8CA5-D4DE6D738ADA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4018E56D-D83B-4DBC-A131-37B19C3EE4EC} = {4018E56D-D83B-4DBC-A131-37B19C3EE4EC}
+		{2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48} = {2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vamp", "src\3rdparty\vamp-plugin-sdk-2.4\vamp.vcxproj", "{4018E56D-D83B-4DBC-A131-37B19C3EE4EC}"
+EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "Sonic Visualiser", "..\..\..\..\..\Program Files (x86)\Sonic Visualiser\Sonic Visualiser.exe", "{2101D0A7-515C-4F24-B061-4B2A1A620023}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Program Files (x86)\Sonic Visualiser\Sonic Visualiser.exe
+		RemoteMachine = LAPPY386
+		StartingDirectory = C:\Program Files (x86)\Sonic Visualiser
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48}.Debug|x64.ActiveCfg = Debug|x64
+		{2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48}.Debug|x64.Build.0 = Debug|x64
+		{2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48}.Debug|x86.ActiveCfg = Debug|Win32
+		{2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48}.Debug|x86.Build.0 = Debug|Win32
+		{2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48}.Release|x64.ActiveCfg = Release|x64
+		{2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48}.Release|x64.Build.0 = Release|x64
+		{2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48}.Release|x86.ActiveCfg = Release|Win32
+		{2CCCEFAE-A4F8-47C8-A645-BEBEEA938F48}.Release|x86.Build.0 = Release|Win32
+		{466E50CE-D31F-4F15-8CA5-D4DE6D738ADA}.Debug|x64.ActiveCfg = Debug|x64
+		{466E50CE-D31F-4F15-8CA5-D4DE6D738ADA}.Debug|x64.Build.0 = Debug|x64
+		{466E50CE-D31F-4F15-8CA5-D4DE6D738ADA}.Debug|x86.ActiveCfg = Debug|Win32
+		{466E50CE-D31F-4F15-8CA5-D4DE6D738ADA}.Debug|x86.Build.0 = Debug|Win32
+		{466E50CE-D31F-4F15-8CA5-D4DE6D738ADA}.Debug|x86.Deploy.0 = Debug|Win32
+		{466E50CE-D31F-4F15-8CA5-D4DE6D738ADA}.Release|x64.ActiveCfg = Release|x64
+		{466E50CE-D31F-4F15-8CA5-D4DE6D738ADA}.Release|x64.Build.0 = Release|x64
+		{466E50CE-D31F-4F15-8CA5-D4DE6D738ADA}.Release|x86.ActiveCfg = Release|Win32
+		{466E50CE-D31F-4F15-8CA5-D4DE6D738ADA}.Release|x86.Build.0 = Release|Win32
+		{4018E56D-D83B-4DBC-A131-37B19C3EE4EC}.Debug|x64.ActiveCfg = Debug|x64
+		{4018E56D-D83B-4DBC-A131-37B19C3EE4EC}.Debug|x64.Build.0 = Debug|x64
+		{4018E56D-D83B-4DBC-A131-37B19C3EE4EC}.Debug|x86.ActiveCfg = Debug|Win32
+		{4018E56D-D83B-4DBC-A131-37B19C3EE4EC}.Debug|x86.Build.0 = Debug|Win32
+		{4018E56D-D83B-4DBC-A131-37B19C3EE4EC}.Release|x64.ActiveCfg = Release|x64
+		{4018E56D-D83B-4DBC-A131-37B19C3EE4EC}.Release|x64.Build.0 = Release|x64
+		{4018E56D-D83B-4DBC-A131-37B19C3EE4EC}.Release|x86.ActiveCfg = Release|Win32
+		{4018E56D-D83B-4DBC-A131-37B19C3EE4EC}.Release|x86.Build.0 = Release|Win32
+		{2101D0A7-515C-4F24-B061-4B2A1A620023}.Debug|x64.ActiveCfg = Release|x86
+		{2101D0A7-515C-4F24-B061-4B2A1A620023}.Debug|x86.ActiveCfg = Release|x86
+		{2101D0A7-515C-4F24-B061-4B2A1A620023}.Release|x64.ActiveCfg = Release|x86
+		{2101D0A7-515C-4F24-B061-4B2A1A620023}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
