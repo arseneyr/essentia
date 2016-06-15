@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2006-2013  Music Technology Group - Universitat Pompeu Fabra
+ * Copyright (C) 2006-2016  Music Technology Group - Universitat Pompeu Fabra
  *
  * This file is part of Essentia
  *
@@ -18,7 +18,6 @@
  */
 
 #include "overlapadd.h"
-#define _USE_MATH_DEFINES
 #include <cmath>
 #include <algorithm>
 
