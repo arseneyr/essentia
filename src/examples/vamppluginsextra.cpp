@@ -1863,3 +1863,72 @@ public:
     return result;
   }
 };
+
+class BeatTrackerMultiFeature : public VampWrapper {
+
+public:
+
+	BeatTrackerMultiFeature(float sr) :
+		VampWrapper(essentia::standard::AlgorithmFactory::create("BeatTrackerMultiFeature"), sr) {}
+
+	std::string getIdentifier() const { return "essentia_" + info().name; }
+	std::string getName() const { return info().name; }
+
+
+
+	OutputList getOutputDescriptors() const {
+		OutputList list;
+
+		OutputDescriptor d;
+		d.identifier = "onsets";
+		d.name = "onsets";
+		d.description = "note onset locations";
+		d.unit = "";
+		d.hasFixedBinCount = true;
+		d.binCount = 0;
+		d.hasKnownExtents = false;
+		d.isQuantized = false;
+		d.sampleRate = _sampleRate;
+		d.sampleType = OutputDescriptor::VariableSampleRate;
+		list.push_back(d);
+		return list;
+	}
+
+	//InputDomain getInputDomain() const { return TimeDomain; }
+
+	FeatureSet process(const float *const *inputBuffers, Vamp::RealTime) {
+
+		RogueVector<float> inputr(const_cast<float*>(inputBuffers[0]), _blockSize);
+		vector<float>& input = static_cast<vector<float>&>(inputr);
+		for (auto i : input) {
+			_pool.add("ticks", i);
+		}
+
+		return FeatureSet();
+	}
+
+	FeatureSet getRemainingFeatures() {
+
+		vector<Real> output;
+		Real junk;
+
+		_algo->input(_algo->inputNames()[0]).set(_pool.value<vector<Real> >("ticks"));
+		_algo->output("ticks").set(output);
+		_algo->output("confidence").set(junk);
+
+		_algo->compute();
+
+		FeatureSet result;
+		vector<Real>::const_iterator it = output.begin();
+		while (it != output.end()) {
+
+			Feature onset;
+			onset.hasTimestamp = true;
+			onset.timestamp = Vamp::RealTime::fromSeconds(*it);
+			result[0].push_back(onset);
+			++it;
+		}
+
+		return result;
+	}
+};

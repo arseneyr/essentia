@@ -20,7 +20,7 @@
 #ifndef ESSENTIA_CONFIG_H
 #define ESSENTIA_CONFIG_H
 
-#include "version.h"
+//#include "version.h"
 
 /**
  * Essentia version number.
@@ -47,7 +47,7 @@
  * little bit, but not that much really.
  */
 #ifndef DEBUGGING_ENABLED
-#define DEBUGGING_ENABLED 1
+#define DEBUGGING_ENABLED 0
 #endif
 
 
@@ -57,7 +57,7 @@
  * compiling the python bindings.
  */
 #ifndef ESSENTIA_EXPORTS
-#define ESSENTIA_EXPORTS 1
+#define ESSENTIA_EXPORTS 0
 #endif
 
 
@@ -195,7 +195,7 @@ typedef unsigned int uint;
 #if ESSENTIA_EXPORTS
 #  define ESSENTIA_API ESSENTIA_DLLEXPORT
 #else
-#  define ESSENTIA_API ESSENTIA_DLLIMPORT
+#  define ESSENTIA_API //ESSENTIA_DLLIMPORT
 #endif
 
 

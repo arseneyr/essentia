@@ -20,9 +20,9 @@
 #ifndef ESSENTIA_MATH_H
 #define ESSENTIA_MATH_H
 
-#ifndef _USE_MATH_DEFINES
+//#ifndef _USE_MATH_DEFINES
 #define _USE_MATH_DEFINES
-#endif
+//#endif
 
 #include <cmath>
 #include <vector>

@@ -118,12 +118,12 @@ WRAP_TEMPORAL_PLUGIN(Larm, "", 1, float);
 WRAP_TEMPORAL_PLUGIN(LoudnessVickers, "", 1, float);
 WRAP_TEMPORAL_PLUGIN(ZeroCrossingRate, "", 1, float);
 
+static Vamp::PluginAdapter<BeatTrackerMultiFeature> tBeatTrackerMultiFeature;
 
 static Vamp::PluginAdapter<Pitch> aPitch;
 static Vamp::PluginAdapter<DistributionShape> aDistributionShape;
 static Vamp::PluginAdapter<BarkShape> aBarkShape;
 
-ESSENTIA_API
 const VampPluginDescriptor *vampGetPluginDescriptor(unsigned int version,
                                                     unsigned int index) {
   if (version < 1) return 0;
@@ -180,20 +180,19 @@ const VampPluginDescriptor *vampGetPluginDescriptor(unsigned int version,
   case 39: return aERBBands.getDescriptor();
   case 40: return aGFCC.getDescriptor();
   case 41: return tZeroCrossingRate.getDescriptor();
+  case 42: return tBeatTrackerMultiFeature.getDescriptor();
 
   default:
     return 0;
   }
 }
 
-
-class Gloub {
-public:
-  Gloub() {
-    essentia::init();
-  }
-};
-
-static Gloub goulou;
-
-//int main() { essentia::init(); return 0; }
+BOOL WINAPI DllMain(
+	_In_ HINSTANCE hinstDLL,
+	_In_ DWORD     fdwReason,
+	_In_ LPVOID    lpvReserved
+	)
+{
+	essentia::init();
+	return TRUE;
+}

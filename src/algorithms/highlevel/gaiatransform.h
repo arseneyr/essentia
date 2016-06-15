@@ -20,7 +20,7 @@
 #ifndef ESSENTIA_GAIATRANSFORM_H
 #define ESSENTIA_GAIATRANSFORM_H
 
-#include <gaia2/transformation.h>
+#include <transformation.h>
 #include "algorithm.h"
 #include "pool.h"
 

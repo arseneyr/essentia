@@ -1,6 +1,7 @@
 # include <cstdlib>
 # include <iostream>
 # include <iomanip>
+#define _USE_MATH_DEFINES
 # include <cmath>
 # include <ctime>
 # include <string>

@@ -20,6 +20,7 @@
 #include "onsetdetectionglobal.h"
 #include <complex>
 #include <limits>
+#include <iterator>
 #include "essentiamath.h"
 
 using namespace std;
@@ -408,8 +409,8 @@ void OnsetDetectionGlobal::computeBeatEmphasis() {
 
   // Matlab M.Davies: take top 40% of weights, zero the rest (not in the paper!)
   vector<Real> sorted;
-  sorted.reserve(_numberERBBands);
-  copy(weightsERB.begin(), weightsERB.end(), sorted.begin());
+  //sorted.reserve(_numberERBBands);
+  copy(weightsERB.begin(), weightsERB.end(), back_inserter(sorted));
   sort(sorted.begin(), sorted.end());
   Real threshold = sorted[int(floor(_numberERBBands * 0.6))];
 

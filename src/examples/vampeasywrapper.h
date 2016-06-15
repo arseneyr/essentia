@@ -58,6 +58,7 @@ public:                                                                  \
   }                                                                      \
 }
 
+
 #define WRAP_TEMPORAL_ALGO(algoname, unit, ndim, outputType)             \
 class algoname : public VampWrapper  {                                   \
 public:                                                                  \

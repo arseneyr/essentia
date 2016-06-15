@@ -27,6 +27,7 @@
 #include <sstream>
 #include <typeinfo>
 #include <string.h>
+#include <algorithm>
 #include "config.h"
 #include "debugging.h"
 #include "streamutil.h"

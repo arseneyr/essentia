@@ -373,6 +373,8 @@ typedef struct _VampPluginDescriptor
     accompanying documentation for notes on how to achieve this with
     certain compilers.
 */
+
+__declspec(dllexport)
 const VampPluginDescriptor *vampGetPluginDescriptor
     (unsigned int hostApiVersion, unsigned int index);
 

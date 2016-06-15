@@ -23,6 +23,7 @@
 #include <vector>
 #include <cctype>
 #include <string>
+#define _USE_MATH_DEFINES
 #include <cmath> // isinf, isnan
 #include "utils/tnt/tnt.h"
 #include "types.h"

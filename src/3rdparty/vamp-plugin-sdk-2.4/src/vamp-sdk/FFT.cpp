@@ -36,6 +36,7 @@
 
 #include <vamp-sdk/FFT.h>
 
+#define _USE_MATH_DEFINES
 #include <cmath>
 
 #if ( VAMP_SDK_MAJOR_VERSION != 2 || VAMP_SDK_MINOR_VERSION != 4 )
